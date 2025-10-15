@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     function convertiTemperatura($temp, $scalaPartenza, $scalaArrivo) {
         if ($scalaPartenza == $scalaArrivo) {
-            return $temp; // Nessuna conversione necessaria
+            return $temp; 
         }
 
         switch ($scalaPartenza) {
