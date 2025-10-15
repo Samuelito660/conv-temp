@@ -1,0 +1,6 @@
+15/10/25 11:36:22 - login by 192.168.65.1 
+Scala di partenza --> F 
+Scala di arrivo --> C 
+Temperatura Inserita --> 87 
+Temperatura convertita --> 30.555555555556 C 
+

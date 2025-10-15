@@ -45,6 +45,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $error = "Errore nella conversione.";
         }
     }
+
+    $handler = fopen("data/conv.txt", "a");
+    echo $handler;
+
+    $ip = $_SERVER['REMOTE_ADDR'];
+    date_default_timezone_set('Europe/Rome');
+    $data = date('d/m/y H:i:s');
+
+    $bytes = fwrite($handler , "".$data." - login by ".$ip." \n". "Scala di partenza --> $scalaPartenza \nScala di arrivo --> $scalaArrivo \nTemperatura Inserita --> $temp \nTemperatura convertita --> $result $scalaArrivo \n\n");
+    fclose($handler);
+
 }
 ?>
 
@@ -90,7 +101,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<p>Scala di arrivo --> $scalaArrivo</p>";    
         echo "<p>Temperatura convertita --> $result $scalaArrivo</p>";
     }
+    
     ?>
     
 </body>
 </html>
+
+
+<?php
+
+
+
+
+
+
+
+
+
